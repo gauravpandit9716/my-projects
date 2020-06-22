@@ -1,0 +1,12 @@
+from main import app
+from flaskext.mysql import MySQL
+
+
+mysql=MySQL()
+
+app.config['MYSQL_DATABASE_USER']='root'
+app.config['MYSQL_DATABASE_PASSWORD']='root1234'
+app.config['MYSQL_DATABASE_DB']='agent_selector'
+app.config['MYSQL_DATABASE_HOST']='localhost'
+
+mysql.init_app(app)
